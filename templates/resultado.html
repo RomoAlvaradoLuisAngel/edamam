@@ -2,16 +2,18 @@
 
 {% block contenido %}
 
-{% for alimentos in alimento %}
+<!-- resultado.html -->
+<h2>Resultados para "{{ busqueda }}"</h2>
 
-<div class="card" style="width: 18rem;">
-  <img src="{{ alimentos.food.image }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ alimentos.food.label }}</h5>
-    <p class="card-text">{{ alimentos.food.nutrients}}</p>
-    <a href="#" class="btn btn-primary">Volver</a>
+{% for alimento in alimentos %}
+  <div class="card">
+    <h3>{{ alimento.food.label }}</h3>
+    <p>Calorías: {{ alimento.food.nutrients.ENERC_KCAL }}</p>
+    <p>Proteínas: {{ alimento.food.nutrients.PROCNT }}</p>
+    <p>Grasas: {{ alimento.food.nutrients.FAT }}</p>
+    <p>Carbohidratos: {{ alimento.food.nutrients.CHOCDF }}</p>
   </div>
-</div>
 {% endfor %}
+
 
 {% endblock %}
