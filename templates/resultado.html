@@ -2,8 +2,15 @@
 
 {% block contenido %}
 
-<h1>Resultados de la busqueda</h1>
+{% for alimento in alimento.hints %}
 
-
+<div class="card" style="width: 18rem;">
+  <img src="{{ alimento.food_imagen }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ alimento.food_name }}</h5>
+    <p class="card-text">{{ alimento.food_info}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
 {% endblock %}
