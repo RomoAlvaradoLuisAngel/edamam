@@ -9,7 +9,7 @@ API_ID = "8497257e"
 
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
-    return render_template('index.html')
+    return render_template('base.html')
 
 @app.route('/buscar', methods=['POST'])
 def buscar():
@@ -31,7 +31,6 @@ def buscar():
                 return redirect(url_for('inicio'))
             
             data = response.json()
-            print("DATA RECIBIDA:", data)
             alimentos_encontrados = data.get('hints', [])
             if not alimentos_encontrados:
                 flash(f"No se encontraron alimentos para la búsqueda proporcionada.", 'warning')

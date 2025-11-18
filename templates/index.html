@@ -1,16 +1,15 @@
+<!-- parte inutil, formualrio en base -->
 {% extends 'base.html' %}
 
 {% block contenido %}
 <div class="container mt-4">
-
     <form method="POST" action="/buscar">
         <div class="mb-3">
             <label for="busqueda" class="form-label">Búsqueda de alimentos</label>
-            <input type="text" class="form-control" id="busqueda"name="busqueda"placeholder="Ejemplo: manzana">
+            <input type="text" class="form-control" id="busqueda"name="busqueda"placeholder="Ejemplo: apple">
         </div>
-
         <button type="submit" class="btn btn-primary w-100">Buscar</button>
     </form>
-
 </div>
+<br>
 {% endblock %}
