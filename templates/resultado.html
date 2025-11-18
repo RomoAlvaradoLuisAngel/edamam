@@ -2,15 +2,16 @@
 
 {% block contenido %}
 
-{% for alimento in alimento.hints %}
+{% for alimentos in alimento %}
 
 <div class="card" style="width: 18rem;">
-  <img src="{{ alimento.food_imagen }}" class="card-img-top" alt="...">
+  <img src="{{ alimentos.food.image }}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">{{ alimento.food_name }}</h5>
-    <p class="card-text">{{ alimento.food_info}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">{{ alimentos.food.label }}</h5>
+    <p class="card-text">{{ alimentos.food.nutrients}}</p>
+    <a href="#" class="btn btn-primary">Volver</a>
   </div>
 </div>
+{% endfor %}
 
 {% endblock %}

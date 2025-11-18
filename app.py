@@ -34,7 +34,7 @@ def buscar():
                 flash(f"No se encontraron alimentos para la búsqueda proporcionada.", 'warning')
                 return redirect(url_for('inicio'))
     
-            return render_template('resultado.html', alimento=alimentos_encontrados, busqueda=busqueda)
+            return render_template('resultado.html', alimentos=alimentos_encontrados, busqueda=busqueda)
         
         except requests.exceptions.RequestException as e:
             flash(f"Error en la solicitud a la API: {e}", 'error')
