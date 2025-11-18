@@ -13,7 +13,18 @@
     </header>
     <br>
 
+<div class="container mt-4">
 
+    <form method="POST" action="/buscar">
+        <div class="mb-3">
+            <label for="busqueda" class="form-label">Búsqueda de alimentos</label>
+            <input type="text" class="form-control" id="busqueda"name="busqueda"placeholder="Ejemplo: manzana">
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Buscar</button>
+    </form>
+
+</div>
     
     {% block contenido %}{% endblock %}
 

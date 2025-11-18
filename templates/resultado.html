@@ -3,16 +3,18 @@
 {% block contenido %}
 
 <!-- resultado.html -->
-<h2>Resultados para "{{ busqueda }}"</h2>
+<h2 class="text-center">Resultados para "{{ busqueda }}"</h2>
 
 {% for alimento in alimentos %}
-  <div class="card">
+<row class="d-flex justify-content-center">
+  <div class="card col-4 mx-1 mb-4 border border-5 border-dark p-3 text-center" style="background-color: #f8f9fa;">
     <h3>{{ alimento.food.label }}</h3>
     <p>Calorías: {{ alimento.food.nutrients.ENERC_KCAL }}</p>
     <p>Proteínas: {{ alimento.food.nutrients.PROCNT }}</p>
     <p>Grasas: {{ alimento.food.nutrients.FAT }}</p>
     <p>Carbohidratos: {{ alimento.food.nutrients.CHOCDF }}</p>
   </div>
+</row>
 {% endfor %}
 
 
